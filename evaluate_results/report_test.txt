@@ -1,0 +1,74 @@
+#    Model                      NDCG@5    NDCG@10    P@5       P@10      MAP         BPref  MRR
+---  -------------------------  --------  ---------  --------  --------  --------  -------  -------
+a    results\result_bi_test     0.236     0.240      0.225     0.147     0.189         nan  0.463
+b    results\result_ce_test     0.335ᵃ    0.337ᵃ     0.308ᵃ    0.203ᵃ    0.268ᵃ        nan  0.566
+c    results\result_bi_ft_test  0.271     0.285      0.239     0.169     0.228         nan  0.474
+d    results\result_ce_ft_test  0.428ᵃᵇᶜ  0.435ᵃᵇᶜ   0.414ᵃᵇᶜ  0.268ᵃᵇᶜ  0.366ᵃᵇᶜ      nan  0.641ᵃᶜ========================
+% Add in preamble
+\usepackage{graphicx}
+\usepackage{booktabs}
+========================
+
+
+% To change the table size, act on the resizebox argument `0.8`.
+\begin{table*}[ht]
+\centering
+\caption{
+Overall effectiveness of the models.
+The best results are highlighted in boldface.
+Superscripts denote significant differences in paired Student's t-test with $p \le 0.01$.
+}
+\resizebox{0.8\textwidth}{!}{
+\begin{tabular}{c|l|c|c|c|c|c|c|c}
+\toprule
+\textbf{\#}
+& \textbf{Model}
+& \textbf{NDCG@5}
+& \textbf{NDCG@10}
+& \textbf{P@5}
+& \textbf{P@10}
+& \textbf{MAP}
+& \textbf{BPref}
+& \textbf{MRR} \\ 
+\midrule
+a &
+results\result\_bi\_test &
+0.236\hphantom{$^{bcd}$} &
+0.240\hphantom{$^{bcd}$} &
+0.225\hphantom{$^{bcd}$} &
+0.147\hphantom{$^{bcd}$} &
+0.189\hphantom{$^{bcd}$} &
+nan\hphantom{$^{bcd}$} &
+0.463\hphantom{$^{bcd}$} \\
+b &
+results\result\_ce\_test &
+0.335$^{a}$\hphantom{$^{cd}$} &
+0.337$^{a}$\hphantom{$^{cd}$} &
+0.308$^{a}$\hphantom{$^{cd}$} &
+0.203$^{a}$\hphantom{$^{cd}$} &
+0.268$^{a}$\hphantom{$^{cd}$} &
+nan\hphantom{$^{acd}$} &
+0.566\hphantom{$^{acd}$} \\
+c &
+results\result\_bi\_ft\_test &
+0.271\hphantom{$^{abd}$} &
+0.285\hphantom{$^{abd}$} &
+0.239\hphantom{$^{abd}$} &
+0.169\hphantom{$^{abd}$} &
+0.228\hphantom{$^{abd}$} &
+nan\hphantom{$^{abd}$} &
+0.474\hphantom{$^{abd}$} \\
+d &
+results\result\_ce\_ft\_test &
+\textbf{0.428}$^{abc}$\hphantom{} &
+\textbf{0.435}$^{abc}$\hphantom{} &
+\textbf{0.414}$^{abc}$\hphantom{} &
+\textbf{0.268}$^{abc}$\hphantom{} &
+\textbf{0.366}$^{abc}$\hphantom{} &
+nan\hphantom{$^{abc}$} &
+\textbf{0.641}$^{ac}$\hphantom{$^{b}$} \\
+\bottomrule
+\end{tabular}
+}
+\label{tab:results}
+\end{table*}
